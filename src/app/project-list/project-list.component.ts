@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { PROJECTS } from '../mock-projects';
 import { CommonModule, UpperCasePipe, DatePipe, CurrencyPipe, PercentPipe, NgFor, NgIf } from '@angular/common';
@@ -10,7 +10,8 @@ import { CommonModule, UpperCasePipe, DatePipe, CurrencyPipe, PercentPipe, NgFor
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.css']
 })
-export class ProjectListComponent implements OnInit {
+
+export class ProjectListComponent {
   projects = PROJECTS;
   selectedProject: string = '';
 
@@ -19,6 +20,7 @@ export class ProjectListComponent implements OnInit {
   ngOnInit() {
     this.projects = this.projectsService.getProjects();
   }
+  
   highlightProject(projectTitle: string) {
     this.selectedProject = projectTitle;
   }

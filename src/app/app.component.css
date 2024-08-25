@@ -1,0 +1,6 @@
+fieldset {
+    width: 80vw;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gainsboro;
+}
