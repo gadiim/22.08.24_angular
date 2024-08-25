@@ -5,7 +5,7 @@ export const PROJECTS = [
     description: 'Redesign of the company website to improve user experience and modernize the look.',
     completionDate: '2024-01-15',
     category: 'Web Development',
-    image: ''
+    image: 'website_rdesign.jpg'
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const PROJECTS = [
     description: 'Creation of a new logo for a startup company.',
     completionDate: '2024-02-20',
     category: 'Graphic Design',
-    image: ''
+    image: 'logo_design.jpg'
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const PROJECTS = [
     description: 'Development of a mobile app for a new product.',
     completionDate: '2024-03-30',
     category: 'Mobile Development',
-    image: ''
+    image: 'mobile_app _development.jpg'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const PROJECTS = [
     description: 'Creation of a complete brand identity for a new business.',
     completionDate: '2024-04-15',
     category: 'Graphic Design',
-    image: ''
+    image: 'brand_identity_design.jpg'
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const PROJECTS = [
     description: 'Development of an online store for a clothing brand.',
     completionDate: '2024-05-20',
     category: 'Web Development',
-    image: ''
+    image: 'e_commerce_website_development.jpg'
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const PROJECTS = [
     description: 'Implementation of SEO strategies to improve website ranking.',
     completionDate: '2024-06-10',
     category: 'Web Development',
-    image: ''
+    image: 'seo_optimization.jpg'
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const PROJECTS = [
     description: 'Planning and executing a social media campaign for a new product launch.',
     completionDate: '2024-07-01',
     category: 'Digital Marketing',
-    image: ''
+    image: 'social_media _campaign.jpg'
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const PROJECTS = [
     description: 'Creation of a corporate video for promotional purposes.',
     completionDate: '2024-08-05',
     category: 'Video Production',
-    image: ''
+    image: 'corporate_video_poduction.jpg'
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const PROJECTS = [
     description: 'Creating a minimalist logo for a tech startup.',
     completionDate: '2024-06-10',
     category: 'Graphic Design',
-    image: ''
+    image: 'logo_design.jpg'
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const PROJECTS = [
     description: 'Revamping a website for an environmental organization with a focus on sustainability.',
     completionDate: '2024-07-15',
     category: 'Web Development',
-    image: ''
+    image: 'website_rdesign.jpg'
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const PROJECTS = [
     description: 'Developing a brand identity for a premium cafe with an author\'s cuisine.',
     completionDate: '2024-08-25',
     category: 'Graphic Design',
-    image: ''
+    image: 'brand_identity_design.jpg'
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ export const PROJECTS = [
     description: 'Creating a brand identity for a fashion boutique with eco-friendly clothing.',
     completionDate: '2024-09-10',
     category: 'Graphic Design',
-    image: ''
+    image: 'brand_identity_design.jpg'
   },
   {
     id: 13,
