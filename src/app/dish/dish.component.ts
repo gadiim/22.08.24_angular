@@ -12,8 +12,8 @@ import { CommonModule, UpperCasePipe, DatePipe, CurrencyPipe, PercentPipe, NgFor
 })
 export class DishComponent {
   dishes = DISHES;
-  selectedDish: any;
-  // selectedDish: string = '';
+  // selectedDish: any; //all buttons are inactive
+  selectedDish: string = ''; //menu button is active
 
   constructor(private dishesService: DishService) { }
 

@@ -1,32 +1,28 @@
 <div class="menu-container">
-    <h1>MENU</h1>
-    <div *ngFor="let dish of dishes" class="dishes-list">
-        <div class="dish-card">
-            <img [src]="dish.image" alt="{{ dish.name }}">
-            <h2>{{ dish.name }}</h2>
-            <p><strong>Категорія:</strong> {{ dish.category }}</p>
-            <p><strong>Інгредієнти:</strong> {{ dish.ingredients }}</p>
-            <p><strong>Ціна:</strong> {{ dish.price | currency:'UAH' }}</p>
-        </div>
-    </div>
-</div>
 
-<div class="menu-container">
     <div class="dish-list">
+
+        <button (click)="highlightDish('')" [ngClass]="{'active': selectedDish === ''}">
+            MENU
+        </button>
+
         <div *ngFor="let dish of dishes">
-            <button (click)="highlightDish('{{ dish.name }}')"
-            [ngClass]="{'active': selectedDish === '{{ dish.name }}'}">{{ dish.name }}</button>
+            <button (click)="highlightDish(dish.name)" [ngClass]="{'active': selectedDish === dish.name}">
+                {{ dish.name }}
+            </button>
         </div>
+
     </div>
-    <div class="dish-card">
-        <div *ngFor="let dish of dishes">
-            <img [src]="dish.image" alt="{{ dish.name }}">
-            <p>{{ dish.name }}<p>
-            <p>category{{ dish.category }}</p>
-            <p>ingredients{{ dish.ingredients }}</p>
-            <p>price{{ dish.price | currency:'UAH' }}</p>
+
+    <div class="motto">
+
+        <div *ngFor="let dish of dishes" class="dish-card"
+            [ngClass]="{'visible': selectedDish === dish.name, 'hidden': selectedDish !== dish.name}">
+            <img [src]="dish.image ? dish.image : 'assets/images/default-image.jpg'" alt="{{ dish.name }}">
+            <p>{{ dish.name | uppercase }}</p>
+            <p>category: {{ dish.category }}</p>
+            <p>ingredients: {{ dish.ingredients }}</p>
+            <p>price: {{ dish.price | currency:'caps ' }}</p>
         </div>
     </div>
 </div>
-
-
