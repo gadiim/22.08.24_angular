@@ -1,0 +1,46 @@
+<div class="projects-wrapper">
+    <table>
+      <caption>Projects</caption>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Image</th>
+          <th>Description</th>
+          <th>Completion Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects" class="project-container"
+            [ngStyle]="{'background-color': project.title === selectedProject ? 'lightblue' : ''}">
+          <td>{{ project.title | uppercase }}</td>
+          <td>
+            <!-- <img [src]="'assets/images/' + project.image" alt="{{ project.title }}"> -->
+
+            <img [src]="project.image ? 'assets/images/' + project.image : 'assets/images/default-image.jpg'" alt="{{ project.title }}">
+          </td>
+          <td>{{ project.description }}</td>
+          <td>{{ project.completionDate | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="btnBlock">
+    <button (click)="highlightProject('Website Redesign')"
+            [ngClass]="{'active': selectedProject === 'Website Redesign'}">Website Redesign</button>
+    <button (click)="highlightProject('Logo Design')"
+            [ngClass]="{'active': selectedProject === 'Logo Design'}">Logo Design</button>
+    <button (click)="highlightProject('Mobile App Development')"
+            [ngClass]="{'active': selectedProject === 'Mobile App Development'}">Mobile App Development</button>
+    <button (click)="highlightProject('Brand Identity Design')"
+            [ngClass]="{'active': selectedProject === 'Brand Identity Design'}">Brand Identity Design</button>
+    <button (click)="highlightProject('E-commerce Website Development')"
+            [ngClass]="{'active': selectedProject === 'E-commerce Website Development'}">E-commerce Website Development</button>
+    <button (click)="highlightProject('SEO Optimization')"
+            [ngClass]="{'active': selectedProject === 'SEO Optimization'}">SEO Optimization</button>
+    <button (click)="highlightProject('Social Media Campaign')"
+            [ngClass]="{'active': selectedProject === 'Social Media Campaign'}">Social Media Campaign</button>
+    <button (click)="highlightProject('Corporate Video Production')"
+            [ngClass]="{'active': selectedProject === 'Corporate Video Production'}">Corporate Video Production</button>
+    <button (click)="highlightProject('')" [ngClass]="{'active': selectedProject === ''}">Clear</button>
+  </div>
+  
