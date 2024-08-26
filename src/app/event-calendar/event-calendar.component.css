@@ -1,0 +1,97 @@
+
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+}
+
+button {
+    margin: 0;
+    padding: 5px;
+    flex: 1;
+    cursor: pointer;
+    background-color: #0c59e7;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button.active {
+    background-color: #3979ef;
+    color: white;
+}
+
+table {
+    width: 100%;
+}
+
+.event-calendar-container {
+    display: flex;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.month-button-container,
+.year-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.month-button-container button,
+.year-button-container button {
+    flex-basis: calc(33.33% - 10px);
+    height: 50px;
+    width: 50px;
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+}
+
+.event-card {
+    display: block;
+    height: 300px;
+    flex-basis: calc(33.33% - 10px);
+    margin: 5px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    
+}
+
+.event-card.hidden {
+    display: none;
+}
+
+.event-card .header {
+    background-color: #0c59e7;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    height: 3rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-card .body {
+    padding: 30px;
+    
+}
+.event-card .body table tbody tr td:first-of-type {
+    color: grey;
+    text-align: left;
+}
+.event-card .body table tbody tr td:last-of-type {
+    color: #0c59e7;
+    text-align: right;
+}

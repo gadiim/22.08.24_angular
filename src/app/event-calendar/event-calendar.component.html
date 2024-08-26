@@ -1,0 +1,53 @@
+<div class="event-calendar-container">
+
+    <div class="button-wrapper">
+        <h3>event calendar</h3>
+
+        <div class="year-button-container">
+            <button *ngFor="let year of years" (click)="highlightEvent(year)" [ngClass]="{'active': selectedEvent === year}">
+                {{ year }}
+            </button>
+            
+            <button (click)="highlightEvent('')" [ngClass]="{'active': selectedEvent === ''}">
+                Clear
+            </button>
+
+        </div>
+
+        <div class="month-button-container">
+                <button *ngFor="let month of months" (click)="highlightEvent(month.id)" [ngClass]="{'active': selectedEvent === month.id}">
+                    {{ month.abbreviation }}
+                </button>
+
+        </div>
+        
+    </div>
+    <hr>
+    <div class="event-container">
+
+
+        <div *ngFor="let event of events" class="event-card"
+        [ngClass]="{'visible': selectedEvent === getMonthFromDate(event.date), 'hidden': selectedEvent !== getMonthFromDate(event.date)}"
+        [ngClass]="{'visible': selectedEvent === getYearFromDate(event.date), 'hidden': selectedEvent !== getYearFromDate(event.date)}">
+            <div class="header">
+                <div>{{ event.title | uppercase}}</div>
+            </div>
+            <div class="body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>date: </td>
+                            <td>{{ event.date | date }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <div style="text-align: justify;">{{ event.description }}</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
