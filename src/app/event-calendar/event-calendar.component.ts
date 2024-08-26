@@ -16,8 +16,12 @@ export class EventCalendarComponent {
   events = EVENTS;
   years = YEARS;
   months = MONTHS;
-  selectedEvent: any; //all buttons are inactive
-  // selectedEvent: string = ''; //clear button is active
+  // selectedEvent: any; //all buttons are inactive
+  // selectedYear: any;
+  // selectedMonth: any;
+  selectedEvent: string = ''; //clear button is active
+  selectedYear: string = ''; //clear button is active
+  selectedMonth: string = ''; //clear button is active
 
   constructor(private eventsService: EventCalendaraService) { }
 
@@ -25,15 +29,35 @@ export class EventCalendarComponent {
     this.events = this.eventsService.getEvents();
   }
 
-  getMonthFromDate(date: string): string {
+  toString(data: number): string {
+    return data < 10 ? '0' + data : String(data); //id XX = data XX number -> string
+  }
+
+  getMonthFromDate(date: string): string { // getting month from yyyy-MM-dd
     return date.slice(5, 7);
   }
 
-  getYearFromDate(date: string): string {
+  getYearFromDate(date: string): string { // getting year from yyyy-MM-dd
     return date.slice(0, 4);
   }
 
   highlightEvent(eventTitle: any) {
     this.selectedEvent = eventTitle;
+  }
+
+  highlightYear(year: string) {
+    this.selectedYear = year;
+  }
+
+  highlightMonth(month: string) {
+    this.selectedMonth = month;
+  }
+
+  clearYear() {
+    this.selectedYear = '';
+  }
+
+  clearMonth() {
+    this.selectedMonth = '';
   }
 }
