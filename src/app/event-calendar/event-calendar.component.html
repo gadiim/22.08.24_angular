@@ -32,6 +32,8 @@
         <ng-container *ngFor="let event of events">
             <div *ngIf="(selectedYear === '' || selectedYear === getYearFromDate(event.date)) &&
                          (selectedMonth === '' || selectedMonth === getMonthFromDate(event.date))" class="event-card">
+                <button
+                    style="position: relative; z-index: 1; float: right; top: 0px; right: 5px; border: none">x</button>
                 <div class="header">
                     <div>{{ event.title | uppercase }}</div>
                 </div>

@@ -72,6 +72,10 @@ table {
     
 }
 
+.event-card:hover {
+    box-shadow: 0 0 5px #3979ef;
+}
+
 .event-card.hidden {
     display: none;
 }
