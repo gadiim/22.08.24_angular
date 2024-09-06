@@ -3,7 +3,17 @@
     <div class="button-wrapper">
         <h3>event calendar</h3>
 
-        <div class="year-button-container">
+        <div (click)="toggleYearContainer()" class="toggle-container">
+            years
+            <ng-container *ngIf="isYearContainerVisible; else showIcon">
+                <img src="assets/icons/keyboard_arrow_up.svg" alt="keyboard_arrow_up" />
+            </ng-container>
+            <ng-template #showIcon>
+                <img src="assets/icons/keyboard_arrow_down.svg" alt="keyboard_arrow_down" />
+            </ng-template>
+        </div>
+        
+        <div *ngIf="isYearContainerVisible" class="year-button-container">   
             <button *ngFor="let year of years" (click)="highlightYear(year)"
                 [ngClass]="{'active': selectedYear === year}">
                 {{ year }}
@@ -14,7 +24,17 @@
             </button>
         </div>
 
-        <div class="month-button-container">
+        <div (click)="toggleMonthsContainer()" class="toggle-container">
+        months
+            <ng-container *ngIf="isMonthsContainerVisible; else showIcon">
+                <img src="assets/icons/keyboard_arrow_up.svg" alt="keyboard_arrow_up" />
+            </ng-container>
+            <ng-template #showIcon>
+                <img src="assets/icons/keyboard_arrow_down.svg" alt="keyboard_arrow_down" />
+            </ng-template>
+        </div>
+
+        <div *ngIf="isMonthsContainerVisible" class="month-button-container">
             <button *ngFor="let month of months" (click)="highlightMonth(toString(month.id))"
                 [ngClass]="{'active': selectedMonth === toString(month.id)}">
                 {{ month.abbreviation }}

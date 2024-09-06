@@ -16,6 +16,10 @@ export class EventCalendarComponent {
   events = EVENTS;
   years = YEARS;
   months = MONTHS;
+
+  isYearContainerVisible = true;
+  isMonthsContainerVisible = true;
+
   // selectedEvent: any; //all buttons are inactive
   // selectedYear: any;
   // selectedMonth: any;
@@ -47,6 +51,14 @@ export class EventCalendarComponent {
 
   highlightYear(year: string) {
     this.selectedYear = year;
+  }
+
+  toggleYearContainer() {
+    this.isYearContainerVisible = !this.isYearContainerVisible;
+  }
+  
+  toggleMonthsContainer() {
+    this.isMonthsContainerVisible = !this.isMonthsContainerVisible;
   }
 
   highlightMonth(month: string) {

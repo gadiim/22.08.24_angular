@@ -101,3 +101,12 @@ table {
     color: #0c59e7;
     text-align: right;
 }
+
+.toggle-container {
+    display: flex;
+    border-bottom: solid 1px; 
+    border-color: #ccc;
+    color: grey;
+    justify-content: space-between;
+    margin: 10px 10px 0 10px;
+}
